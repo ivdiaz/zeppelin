@@ -73,6 +73,7 @@
 
   <modules>
     <module>zeppelin-zengine</module>
+    <module>crossdata</module>
     <module>spark</module>
     <module>markdown</module>
     <module>shell</module>
