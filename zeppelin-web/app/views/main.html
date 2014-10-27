@@ -15,7 +15,6 @@ limitations under the License.
 -->
 <div class="width-full">
     <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
@@ -43,8 +42,10 @@ limitations under the License.
 
             <h3>Interactive command shell</h3>
             <br>
-            <a href="javascript:void(0);" class="btn btn-dark btn-lg" ng-click="createNewNote()"
-               style="text-decoration: none;"><i style="font-size: 15px;" class="icon-notebook"></i> Create new note</a>
+
+            <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle">Start</a>
+
+
         </div>
     </header>
     <!-- <div class="zeppelin"></div>
@@ -147,6 +148,7 @@ limitations under the License.
             }
         });
     });
+
 
 
 </script>
