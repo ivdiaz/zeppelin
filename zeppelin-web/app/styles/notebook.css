@@ -13,6 +13,18 @@
  * limitations under the License.
  */
 
+.displayNavBar {
+  display: inline !important;
+}
+
+body.asIframe {
+  padding-top: 0px;
+}
+
+body .navbar {
+  margin-bottom: 10px;
+}
+
 .paragraph-col {
   margin: 0 0 0 0px;
   padding: 0 0 0 0px;
@@ -251,10 +263,10 @@
 }
 
 .noteAction {
+  color:#000;
   margin-left: -10px;
   margin-right: -10px;
-  margin-top: -10px;
-  font-family: 'Roboto', sans-serif;
+  margin-top: 40px;
 }
 
 .new_h3 {

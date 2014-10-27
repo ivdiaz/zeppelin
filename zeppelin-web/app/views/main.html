@@ -13,36 +13,140 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<div class="box width-full home">
-  <div class="zeppelin"><div class="zeppelin2"></div></div>
-  <div style="margin-top: -380px;">
-    <h1 class="box-heading">
-      Welcome to Zeppelin!
-    </h1>
-    Zeppelin is web-based notebook that enables interactive data analytics.<br >You can make beautiful data-driven, interactive, collaborative document with SQL, code and even more!<br>
-    <div class="row">
-      <div class="col-md-4">
-        <h3>Notebook</h3>
-        <div ng-controller="NavCtrl">
-          <h5><a href="javascrip:void(0);" ng-click="createNewNote()" style="text-decoration: none;"><i style="font-size: 15px;" class="icon-notebook"></i> Create new note</a></h5>
-          <ul style="list-style-type: none;">
-            <li ng-repeat="note in notes track by $index"><i style="font-size: 10px;" class="icon-doc"></i> 
-              <a style="text-decoration: none;" href="#/notebook/{{note.id}}">{{note.name || 'Note ' + note.id}}</a>
+<div class="width-full">
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top">Crossdata</a>
             </li>
-          </ul>
+            <li>
+                <div ng-controller="NavCtrl">
+                    <h5><a href="javascript:void(0);" ng-click="createNewNote()" style="text-decoration: none;"><i
+                            style="font-size: 15px;" class="icon-notebook"></i> Create new note</a></h5>
+                    <ul style="list-style-type: none;">
+                        <li ng-repeat="note in notes track by $index">
+                            <a style="text-decoration: none;" href="#/notebook/{{note.id}}">{{note.name || 'Note ' +
+                                note.id}}</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center" ng-controller="NavCtrl">
+            <h1>Crossdata</h1>
+
+            <h3>Interactive command shell</h3>
+            <br>
+            <a href="javascript:void(0);" class="btn btn-dark btn-lg" ng-click="createNewNote()"
+               style="text-decoration: none;"><i style="font-size: 15px;" class="icon-notebook"></i> Create new note</a>
         </div>
-      </div>
-      <div class="col-md-6">
-        <h3>Help</h3>
-        Get started with <a style="text-decoration: none;" href="http://zeppelin-project.org/docs/index.html" target="_blank">Zeppelin documentation</a><br>
-        
-        <h3>Community</h3>
-        Please feel free to help us to improve Zeppelin, <br>
-        Any contribution are welcome!<br><br>
-        <a style="text-decoration: none;" href="https://groups.google.com/forum/#!forum/zeppelin-developers" target="_blank"><i style="font-size: 15px;" class="fa fa-users"></i> Mailing list</a><br>
-        <a style="text-decoration: none;" href="https://zeppelin-project.atlassian.net/browse/ZEPPELIN" target="_blank"><i style="font-size: 15px;" class="fa fa-bug"></i> Issues tracking</a><br>
-        <a style="text-decoration: none;" href="https://zeppelin-project.atlassian.net/browse/ZEPPELIN" target="_blank"><i style="font-size: 20px;" class="fa fa-github"></i> Github</a>
-      </div>
-    </div>
-  </div>
+    </header>
+    <!-- <div class="zeppelin"></div>
+     <div class="col-md-4">
+         <h3>Notebook</h3>
+
+         <div ng-controller="NavCtrl">
+             <h5><a href="javascript:void(0);" ng-click="createNewNote()" style="text-decoration: none;"><i
+                     style="font-size: 15px;" class="icon-notebook"></i> Create new note</a></h5>
+             <ul style="list-style-type: none;">
+                 <li ng-repeat="note in notes track by $index"><i style="font-size: 10px;" class="icon-doc"></i>
+                     <a style="text-decoration: none;" href="#/notebook/{{note.id}}">{{note.name || 'Note ' +
+                         note.id}}</a>
+                 </li>
+             </ul>
+         </div>
+     </div>
+     <div style="margin-top: -380px;">
+         <h1 class="box-heading">
+             Welcome to Crossdata,
+         </h1>
+         <div class="col-md-2">
+         <p>Crossdata (aka Meta) is a distributed framework that unifies the interaction with batch and strea
+             ming sources
+             supporting multiple datastore technologies thanks to its generic architecture and a custom SQL-like language
+             with support for streaming queries. Supporting multiple architectures imposes two main challenges: how to
+             normalize the access to the datastores, and how to cope with datastore limitations. To access multiple
+             technologies Crossdata defines a common unifying interface containing the set of operations that a datastore
+             may
+             support. New connectors can be easily added to increase its connectivity capabilities. Two types of
+             connectors
+             are defined: native and spark-based. Native connectors are faster for simple operations, while Spark-based
+             connectors offer a larger set of functionality. The Crossdata planner decides which connector will be used
+             for
+             any request based its characteristics. We offer a shell, Java/REST APIs, and ODBC for BI.</p>
+
+         <p>
+             Crossdata interpreter @ Zeppelin is web-based notebook that enables interactive data analytics.<br>You can
+             make
+             beautiful data-driven,interactive, collaborative document with SQL, code and even more!<br></p>
+         </div>
+         <div class="row">
+             <div class="col-md-4">
+                 <h3>Notebook</h3>
+
+                 <div ng-controller="NavCtrl">
+                     <h5><a href="javascrip:void(0);" ng-click="createNewNote()" style="text-decoration: none;"><i
+                             style="font-size: 15px;" class="icon-notebook"></i> Create new note</a></h5>
+                     <ul style="list-style-type: none;">
+                         <li ng-repeat="note in notes track by $index"><i style="font-size: 10px;" class="icon-doc"></i>
+                             <a style="text-decoration: none;" href="#/notebook/{{note.id}}">{{note.name || 'Note ' +
+                                 note.id}}</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+             <div class="col-md-6">
+                 <h3>Help</h3>
+                 Get started creating a Notebook and using Crossdata<a style="text-decoration: none;"
+                                                                       href="https://github.com/Stratio/crossdata"
+                                                                       target="_blank">Crossdata documentation</a><br>
+
+                 <h3>Community</h3>
+                 Please feel free to help us to improve Crossdata, <br>
+                 Any contribution are welcome!<br><br>
+                 <a style="text-decoration: none;" href="https://crossdata.atlassian.net"
+                    target="_blank"><i style="font-size: 15px;" class="fa fa-bug"></i> Issues tracking</a><br>
+                 <a style="text-decoration: none;" href="https://github.com/Stratio/crossdata
+                    target=" _blank"><i style="font-size: 20px;" class="fa fa-github"></i> Github</a>
+             </div>
+         </div>
+     </div>-->
 </div>
+<script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+
+</script>
