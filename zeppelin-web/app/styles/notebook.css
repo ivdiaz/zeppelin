@@ -16,6 +16,10 @@
 .displayNavBar {
   display: inline !important;
 }
+.container{
+  padding-left:12px;
+  padding-right:12px;
+}
 
 body.asIframe {
   padding-top: 0px;
