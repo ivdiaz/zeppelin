@@ -13,16 +13,20 @@
  * limitations under the License.
  */
 
+
 .displayNavBar {
   display: inline !important;
+  padding-left:12px;
+  padding-right:12px;
+  background-color:#333;
 }
-.container{
+#notebook{
   padding-left:12px;
   padding-right:12px;
 }
 
 body.asIframe {
-  padding-top: 0px;
+  padding-top:0px;
 }
 
 body .navbar {
@@ -40,14 +44,11 @@ body .navbar {
 }
 
 .paragraphAsIframe{
-  padding: 0px 0px 0px 0px;
-  margin-top: -79px;
-  margin-left: -10px;
-  margin-right: -10px;
+  padding: 50px 12px 0px 12px;
 }
 
 .paragraphAsIframe .control {
-  background-color: rgba(255,255,255,0.9);
+  background-color: #fff;
   border-top: 1px solid #EFEFEF;
   display: none;
   float: right;
@@ -67,10 +68,11 @@ body .navbar {
 .paragraphAsIframe .editor {
   width: 100%;
   border-left: 4px solid #EEEEEE;
-  background: rgba(255, 255, 255, 0.9);
+  background: #fff;
 }
 
 .paragraphAsIframe .text {
+  padding-top:45px;
   white-space: pre;
   display: block;
   unicode-bidi: embed;
@@ -80,7 +82,7 @@ body .navbar {
   line-height: 1.42857143!important;
   word-break: break-all!important;
   word-wrap: break-word!important;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .labelBtn {
@@ -116,7 +118,7 @@ body .navbar {
 }
 
 .paragraph .control {
-  background-color: rgba(255,255,255,0.85);
+  background-color: #fff;
   /*display: none;*/
   float: right;
   color: #999;
@@ -177,6 +179,8 @@ body .navbar {
   border-left: 4px solid #DDDDDD;
   background: rgba(255, 255, 255, 0.0);
   margin: 7px 0 2px 0px;
+  padding-top: 5px;
+  font-size: 14px;
 }
 
 .paragraph .text {
@@ -191,7 +195,7 @@ body .navbar {
   word-wrap: break-word!important;
   /*font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;*/
   font-family: 'Roboto', sans-serif;
-  font-size: 14px!important;
+  font-size: 16px!important;
 }
 
 .paragraph p {
